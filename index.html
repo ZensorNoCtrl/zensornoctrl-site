@@ -1,80 +1,78 @@
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ZensorNoCtrl • Offizielle Seite</title>
-  <meta name="description" content="ZensorNoCtrl – politischer Untergrund-Sound. Härter als PR, zurück zu echter Menschlichkeit." />
-  <!-- Favicon als Data-URI, kein assets-Ordner nötig -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230b0b0c'/><text x='50%' y='58%' font-size='36' fill='%23ffffff' text-anchor='middle' font-family='Arial,Helvetica,sans-serif'>Z</text></svg>">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="wrap flex">
-      <a class="brand" href="index.html" aria-label="ZensorNoCtrl">
-        <!-- Inline-Logo (Name im Logo enthalten) -->
-        <svg class="logo" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ZensorNoCtrl Logo">
-          <text x="50%" y="58%" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="120" font-weight="700" fill="#ffffff">ZensorNoCtrl</text>
-        </svg>
-      </a>
-      <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="music.html">Music</a>
-        <a href="videos.html">Videos</a>
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
-    </div>
-  </header>
+:root{
+  --bg:#0b0b0c;
+  --fg:#e9e9ea;
+  --sub:#a2a2aa;
+  --line:#232327;
+  --wrap:1000px;
+  --bg-dim:0.55; /* Abdunklung über dem Background-Logo (0 = aus, 0.7 = stärker) */
+}
 
-  <!-- Hero mit „Bild“-Feeling per CSS (keine Dateien nötig) -->
-  <section class="hero hero-image">
-    <div class="wrap hero-inner">
-      <h1 class="visually-hidden">ZensorNoCtrl</h1>
-      <p class="subtitle">Kein Gesicht. Keine Zensur. Nur Beats und Realität in Wort.</p>
-      <div class="cta-row">
-        <a class="btn" href="https://open.spotify.com/artist/3wh09e6drdLMa7fi2R5dGy" target="_blank" rel="noopener">Spotify</a>
-        <a class="btn" href="https://youtube.com/@zensornoctrl" target="_blank" rel="noopener">YouTube</a>
-        <a class="btn" href="https://www.tiktok.com/@zensornoctrl0" target="_blank" rel="noopener">TikTok</a>
-        <a class="btn" href="https://www.instagram.com/zensornoctrl" target="_blank" rel="noopener">Instagram</a>
-      </div>
-    </div>
-  </section>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background: var(--bg) url("assets/logo.png") no-repeat center center fixed;
+  background-size: contain; /* -> 'cover' verwenden, wenn Logo den ganzen Screen füllen soll */
+  color:var(--fg);
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
 
-  <main class="wrap">
-    <section class="grid cards">
-      <article class="card">
-        <h3>Politischer Untergrund-Sound</h3>
-        <p>Härter als PR, zurück zu echter Menschlichkeit.</p>
-      </article>
+/* Dunkle Overlay-Schicht für bessere Lesbarkeit über dem Logo */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background: rgba(11,11,12,var(--bg-dim));
+  pointer-events:none;
+  z-index:0;
+}
 
-      <article class="card">
-        <h3>Clips</h3>
-        <p>Glitches & Botschaften – Videos, die nicht kuscheln.</p>
-        <a class="btn ghost" href="videos.html">Beweise ansehen</a>
-      </article>
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 16px}
 
-      <article class="card">
-        <h3>Kontakt</h3>
-        <p>Keine Shows. Kein Booking. Für Kollabos/Medien: schreib hier.</p>
-        <a class="btn ghost" href="kontakt.html">Kontakt öffnen</a>
-      </article>
-    </section>
-  </main>
+.site-header{
+  border-bottom:1px solid var(--line);
+  position:sticky; top:0;
+  background: rgba(11,11,12,.75);
+  backdrop-filter: blur(8px);
+  z-index:2; /* über Overlay */
+}
+.flex{display:flex;align-items:center;justify-content:space-between}
 
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div class="foot-brand">
-        <svg class="logo small" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <text x="50%" y="58%" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="120" font-weight="700" fill="#ffffff">ZensorNoCtrl</text>
-        </svg>
-      </div>
-      <nav class="footnav">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </nav>
-      <div class="copy">© 2025 ZensorNoCtrl – Zwischen Beats & klaren Worten.</div>
-    </div>
-  </footer>
-</body>
-</html>
+.logo{height:42px;display:block}
+.logo.small{height:28px}
+
+.nav a{color:var(--sub);text-decoration:none;padding:16px 10px;display:inline-block}
+.nav a:hover,.nav a.active{color:#fff}
+
+main, footer{position:relative; z-index:1;} /* über Overlay */
+
+.hero{padding:84px 0 28px; text-align:center}
+.subtitle{color:#eaeaf1;font-size:1.1rem;margin:0 0 18px;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.btn{border:1px solid var(--line);padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--fg)}
+.btn:hover{background:#151519}
+.btn.ghost{background:transparent}
+
+.grid{display:grid;gap:16px;margin:28px 0 40px}
+.grid.cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{border:1px solid var(--line);border-radius:12px;padding:16px;background:#0f0f12}
+
+.site-footer{border-top:1px solid var(--line);margin-top:40px}
+.footer-grid{display:grid;gap:12px;grid-template-columns:auto 1fr auto;align-items:center;padding:18px 0}
+.footnav a{color:var(--sub);text-decoration:none;margin-left:16px}
+.copy{color:var(--sub);text-align:right}
+
+.contact{display:grid;gap:12px;max-width:560px}
+.contact label{display:grid;gap:6px;color:var(--sub)}
+.contact input,.contact textarea{background:#0e0e11;border:1px solid var(--line);border-radius:8px;padding:10px;color:var(--fg)}
+.contact button{padding:12px 16px;border:1px solid var(--line);border-radius:8px;background:#141419;color:var(--fg);cursor:pointer}
+.contact button:hover{background:#18181f}
+
+.visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+@media (max-width:720px){
+  .footer-grid{grid-template-columns:1fr;text-align:center}
+  .nav{display:none}
+  .copy{text-align:center}
+}
+
