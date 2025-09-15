@@ -1,119 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ZensorNoCtrl — Wettermanipulation & Geopolitik</title>
-
-  <!-- Social Preview -->
-  <meta name="description" content="Neuer Track: Wettermanipulation & Geopolitik. Hör jetzt auf Spotify, YouTube, TikTok & mehr." />
-  <meta property="og:title" content="ZensorNoCtrl — Wettermanipulation & Geopolitik" />
-  <meta property="og:description" content="Neuer Track: Wettermanipulation & Geopolitik. Hör jetzt auf Spotify, YouTube, TikTok & mehr." />
-  <meta property="og:image" content="https://zensornoctrl.com/assets/cover.PNG?v=1" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://zensornoctrl.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <style>
-    :root{
-      --bg:#0a0a0a;--fg:#f2f2f2;--muted:#9a9a9a;
-      --accent:#ff2a2a;--btn:#181818;--btn-hover:#202020;--border:#2a2a2a;--maxw:880px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:24px}
-    header{display:flex;gap:18px;align-items:center;margin:28px 0 20px}
-    .cover{
-      width:110px;height:110px;border-radius:10px;flex:0 0 auto;
-      border:1px solid var(--border);background:#111;overflow:hidden;display:block;
-    }
-    .cover img{width:100%;height:100%;object-fit:cover;display:block}
-    .hgroup h1{margin:0;font-size:clamp(20px,4vw,28px);line-height:1.15}
-    .hgroup p{margin:6px 0 0;color:var(--muted);font-size:14px}
-    .notice{border:1px solid var(--border);background:linear-gradient(180deg,#111,#0d0d0d);padding:16px;border-radius:12px;margin:16px 0 18px;line-height:1.45}
-    .btns{display:grid;gap:12px}
-    .btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 16px;border-radius:12px;border:1px solid var(--border);background:var(--btn);color:var(--fg);text-decoration:none;font-weight:600;transition:.15s transform,.15s background}
-    .btn:hover{background:var(--btn-hover);transform:translateY(-1px)}
-    .btn.primary{background:var(--accent);border-color:transparent;color:#fff}
-    .btn.primary:hover{filter:brightness(0.95)}
-    .grid{display:grid;gap:12px;grid-template-columns:1fr 1fr}
-    @media (max-width:560px){.grid{grid-template-columns:1fr}}
-    .embed{margin:18px 0;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#111}
-    footer{margin:24px 0 10px;color:var(--muted);font-size:12px;text-align:center}
-    .small{font-size:12px;color:var(--muted)}
-    .sep{opacity:.35;margin:0 6px}
-    footer a{ color: var(--muted); text-decoration: none; }
-    footer a:hover{ text-decoration: underline; color: var(--fg); }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZensorNoCtrl – Offizielle Seite</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrap">
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="ZensorNoCtrl Logo">
+    </div>
+    <nav class="nav">
+      <a href="#music">Musik</a>
+      <a href="#video">Videos</a>
+      <a href="#release-digitaler-euro">Neues Release</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
 
-    <header>
-      <div class="cover">
-        <img src="assets/cover.PNG?v=1" alt="Cover" loading="lazy" />
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>ZensorNoCtrl</h1>
+    <p>Untergrund-Rap & Techno – politisch, kompromisslos, echt.</p>
+  </section>
+
+  <!-- Neues Release -->
+  <section id="release-digitaler-euro" class="release">
+    <div class="release-media">
+      <!-- Cover -->
+      <img src="assets/digitaler-euro-cover.png" alt="Digitaler Euro – Fragen (Cover)" class="release-cover" loading="lazy">
+      <!-- Spotify Track Embed -->
+      <div class="spotify-embed">
+        <iframe
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/track/50Oles7ODRYELJEtROTpPR?utm_source=generator"
+          width="100%" height="152" frameborder="0" loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
       </div>
-      <div class="hgroup">
-        <h1>ZensorNoCtrl</h1>
-        <p>Neuer Track: <strong>Wettermanipulation & Geopolitik</strong></p>
-        <p class="small">Underground Rap • Systemkritisch • Dystopisch</p>
+    </div>
+
+    <div class="release-info">
+      <h2>Digitaler Euro – Fragen</h2>
+      <p>Düstere Fragen. Klare Kante. Politrap ohne Filter.</p>
+
+      <div class="release-cta">
+        <a href="https://open.spotify.com/track/50Oles7ODRYELJEtROTpPR?si=ufNkutLFRIWYf8Nrkz7etg" target="_blank" rel="noopener" class="btn">Auf Spotify hören</a>
+        <a href="https://youtube.com/@zensornoctrl" target="_blank" rel="noopener" class="btn btn-ghost">YouTube Kanal</a>
+        <a href="https://www.tiktok.com/@zensornoctrl0" target="_blank" rel="noopener" class="btn btn-ghost">TikTok Profil</a>
       </div>
-    </header>
-
-    <div class="notice">
-      🚨 <strong>Jetzt hören:</strong> Klicke auf <em>Neuer Single-Link</em> (HyperFollow) oder spiele direkt unten den Spotify-Player ab.
     </div>
+  </section>
 
-    <!-- Primärer CTA: HyperFollow -->
-    <a class="btn primary" target="_blank" rel="noopener"
-       href="https://distrokid.com/hyperfollow/zensornoctrl/wettermanipulation--geopolitik">
-      👉 Neuer Single-Link (HyperFollow)
-    </a>
+  <!-- Musik Section -->
+  <section id="music">
+    <h2>Musik</h2>
+    <p>Alle Tracks & Releases von ZensorNoCtrl findest du hier.</p>
+    <!-- Platzhalter: weitere Releases/Player -->
+  </section>
 
-    <!-- Spotify Embed -->
-    <div class="embed">
-      <iframe style="border:0;width:100%;height:352px"
-        src="https://open.spotify.com/embed/album/1Eaqud8uMeDXzpg9NL1X0i?utm_source=generator&theme=0"
-        loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    </div>
+  <!-- Video Section -->
+  <section id="video">
+    <h2>Videos</h2>
+    <p>Official Clips & Visuals.</p>
+    <!-- Platzhalter: YouTube Embeds -->
+  </section>
 
-    <!-- Plattformen -->
-    <div class="btns grid">
-      <a class="btn" target="_blank" rel="noopener"
-         href="https://open.spotify.com/artist/3wh09e6drdLMa7fi2R5dGy">🎧 Spotify (Artist)</a>
-      <a class="btn" target="_blank" rel="noopener"
-         href="https://youtube.com/@zensornoctrl">▶️ YouTube</a>
-      <a class="btn" target="_blank" rel="noopener"
-         href="https://www.tiktok.com/@zensornoctrl0">📱 TikTok</a>
-      <a class="btn" target="_blank" rel="noopener"
-         href="https://www.instagram.com/zensornoctrl">📸 Instagram</a>
-    </div>
+  <!-- Kontakt -->
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <p>Business & Booking: <a href="mailto:info@zensornoctrl.com">info@zensornoctrl.com</a></p>
+  </section>
 
-    <div style="height:10px"></div>
-
-    <!-- Optionaler Follow-Button -->
-    <a class="btn" target="_blank" rel="noopener"
-       href="https://open.spotify.com/follow/1/?uri=spotify:artist:3wh09e6drdLMa7fi2R5dGy&size=detail&theme=dark">
-      ⭐ Folge ZensorNoCtrl auf Spotify
-    </a>
-
-    <!-- Footer mit Links -->
-    <footer>
-      © <span id="y"></span> ZensorNoCtrl
-      <span class="sep">•</span>
-      <a href="impressum.html" class="small">Impressum</a>
-      <span class="sep">•</span>
-      <a href="datenschutz.html" class="small">Datenschutz</a>
-      <span class="sep">•</span>
-      <a href="kontakt.html" class="small">Kontakt</a>
-      <span class="sep">•</span>
-      <a href="music.html" class="small">Musik</a>
-      <span class="sep">•</span>
-      <a href="videos.html" class="small">Videos</a>
-    </footer>
-
-  </div>
-
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 ZensorNoCtrl – Alle Rechte vorbehalten.</p>
+  </footer>
 </body>
 </html>
